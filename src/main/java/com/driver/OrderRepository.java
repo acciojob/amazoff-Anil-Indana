@@ -17,11 +17,11 @@ public class OrderRepository {
     HashMap<String, HashSet<String>> partnerOrderDb;
     HashMap<String,String> orderToPartner; // assigned Orders
 
-    public OrderRepository(HashMap<String, Order> orderDb, HashMap<String, DeliveryPartner> deliveryPartnerDb, HashMap<String, HashSet<String>> partnerOrderDb, HashMap<String, String> orderToPartner) {
-        this.orderDb = orderDb;
-        this.deliveryPartnerDb = deliveryPartnerDb;
-        this.partnerOrderDb = partnerOrderDb;
-        this.orderToPartner = orderToPartner;
+    public OrderRepository() {
+        this.orderDb = new HashMap<>();
+        this.deliveryPartnerDb = new HashMap<>();
+        this.partnerOrderDb = new HashMap<>();
+        this.orderToPartner = new HashMap<>();
     }
 
     public void addOrder(Order order){
